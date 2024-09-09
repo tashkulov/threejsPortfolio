@@ -16,12 +16,10 @@ import Controls from "./World/Controls.js";
 export default class Experience {
   static instance;
   constructor(canvas) {
-    // check if this already exist
     if (Experience.instance) {
       return Experience.instance;
     }
 
-    // if does not exist, sets everything below to instance
     THREE.Cache.enabled = true;
     Experience.instance = this;
     this.canvas = canvas;
